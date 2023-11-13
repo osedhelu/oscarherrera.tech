@@ -6,7 +6,7 @@ def comprimir_video(ruta_video):
    clip = VideoFileClip(ruta_video)
 
    # Reducir el tamaño del video sin perder calidad
-   clip_resized = clip.resize(height=1080)
+   clip_resized = clip.resize(height=1440)
 
    # Guardar el video comprimido
    nombre_video = os.path.splitext(os.path.basename(ruta_video))[0]
@@ -14,5 +14,5 @@ def comprimir_video(ruta_video):
    clip_resized.write_videofile(ruta_video_comprimido, codec='libvpx', audio_codec='libvorbis')
 
    return ruta_video_comprimido
-url = comprimir_video("./public/videoc.webm")
+url = comprimir_video("./videoc.webm")
 print(url)
