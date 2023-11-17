@@ -3,10 +3,6 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			textShadow: {
-				'default': '0 2px 5px rgba(0, 0, 0, 0.5)',
-				'lg': '0 2px 10px rgba(0, 0, 0, 0.5)',
-			},
 			colors: {
 				primary: {
 					50: '#f2f6ee',
@@ -25,11 +21,6 @@ export default {
 		},
 		fontFamily: {
 			sans: ['Gotham SSm A, sans-serif']
-		}
-	},
-	variants: {
-		extend: {
-			textShadow: ['responsive', 'hover', 'focus'],
 		}
 	},
 	plugins: [],
