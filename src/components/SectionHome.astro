@@ -1,16 +1,18 @@
 <section
-    class="bg-black text-white h-screen w-screen text-center overflow-hidden"
+    class="bg-white text-white h-screen w-screen text-center overflow-hidden"
 >
     <div class="z-30 relative flex h-full flex-col">
         <header>
-            <h2 class="text-[40px] mt-40 font-medium">
+            <h2 class="lg:text-6xl mt-40 font-medium text-shadow">
                 Soy Oscar Herrera Lugo
             </h2>
-            <p class="text-sm">
-                Como desarrollador Full Stack, tengo una amplia gama de
-                habilidades técnicas y blandas que me permiten trabajar en todas
-                las etapas del desarrollo de software.
-            </p>
+            <div class="lg:mx-[30rem]">
+                <p class="lg:text-2xl mt-20 text-shadow">
+                    Como desarrollador Full Stack, tengo una amplia gama de
+                    habilidades técnicas y blandas que me permiten trabajar en
+                    todas las etapas del desarrollo de software.
+                </p>
+            </div>
         </header>
         <footer class="flex flex-col flex-grow justify-end pb-24">
             <div>
@@ -30,3 +32,10 @@
             src="/videoc-compress.webm"></video>
     </div>
 </section>
+<style>
+    .text-shadow {
+        text-shadow:
+            -1px -1px 10px #000,
+            -1px -1px 7px #fff;
+    }
+</style>
