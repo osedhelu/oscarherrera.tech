@@ -16,7 +16,17 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="🚀 Oscar Herrera: Full Stack Developer con experiencia en React, Kotlin y más. Expertos en desarrollo de aplicaciones web y móviles. Contacta con nosotros para más detalles."
+    />
+    <meta property="og:type" content="website" /><meta
+      property="og:image"
+      content="https://oscarherrera.tech/favicon-white.svg"
+    />
+    <meta property="og:url" content="https://oscarherrera.tech" />
   </head>
+
   <body class="bg-black">
     <SidebarHome />
     <slot />
