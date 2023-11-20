@@ -4,6 +4,7 @@ interface Props {
   title: string;
 }
 
+import { ViewTransitions } from "astro:transitions";
 const { title } = Astro.props;
 ---
 
@@ -25,41 +26,44 @@ const { title } = Astro.props;
       content="https://oscarherrera.tech/favicon-white.svg"
     />
     <meta property="og:url" content="https://oscarherrera.tech" />
+
+    <script src="/public/flowbite.min.js"></script>
+    <ViewTransitions />
   </head>
 
   <body class="bg-black">
     <SidebarHome />
     <slot />
+    <style is:global>
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font.woff);
+        font-weight: 300;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font01.woff);
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font02.woff);
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font03.woff);
+        font-weight: 700;
+        font-style: normal;
+      }
+      .text-shadow {
+        text-shadow:
+          0px 0px 5px rgba(255, 255, 255, 0.65),
+          0px 0px 9px rgba(0, 0, 0, 0.35);
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  @font-face {
-    font-family: "Gotham SSm A";
-    src: url(./font.woff);
-    font-weight: 300;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Gotham SSm A";
-    src: url(./font01.woff);
-    font-weight: 400;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Gotham SSm A";
-    src: url(./font02.woff);
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Gotham SSm A";
-    src: url(./font03.woff);
-    font-weight: 700;
-    font-style: normal;
-  }
-  .text-shadow {
-    text-shadow:
-      0px 0px 5px rgba(255, 255, 255, 0.65),
-      0px 0px 9px rgba(0, 0, 0, 0.35);
-  }
-</style>

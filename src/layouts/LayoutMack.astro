@@ -1,0 +1,71 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import SidebarHome from "../components/shared/SidebarHome.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="🚀 Oscar Herrera: Full Stack Developer con experiencia en React, Kotlin y más. Expertos en desarrollo de aplicaciones web y móviles. Contacta con nosotros para más detalles."
+    />
+    <meta property="og:type" content="website" /><meta
+      property="og:image"
+      content="https://oscarherrera.tech/favicon-white.svg"
+    />
+    <meta property="og:url" content="https://oscarherrera.tech" />
+
+    <script src="public/flowbite.min.js"></script>
+    <ViewTransitions />
+  </head>
+
+  <body class="bg-black">
+    <SidebarHome />
+    <div class="pt-[4.5vh]">
+      <slot />
+    </div>
+    <style is:global>
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font.woff);
+        font-weight: 300;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font01.woff);
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font02.woff);
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Gotham SSm A";
+        src: url(./font03.woff);
+        font-weight: 700;
+        font-style: normal;
+      }
+      .text-shadow {
+        text-shadow:
+          0px 0px 5px rgba(255, 255, 255, 0.65),
+          0px 0px 9px rgba(0, 0, 0, 0.35);
+      }
+    </style>
+  </body>
+</html>
