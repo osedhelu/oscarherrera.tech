@@ -8,7 +8,7 @@ const menuData = [
 ];
 ---
 
-<nav class="fixed w-full z-50 top-0 start-0">
+<nav class="fixed header-animation  w-full z-50 top-0 start-0">
   <div
     class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-1"
   >
@@ -82,3 +82,21 @@ const menuData = [
     </div>
   </div>
 </nav>
+
+<style>
+  .header-animation {
+    animation: enhance-header linear .3s both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 10px;
+  }
+  @keyframes enhance-header {
+    to {
+      background: #ffffff3c;
+      backdrop-filter: blur(5px);
+      font-size: 18px;
+      color: black
+    }
+    
+  }
+
+</style>

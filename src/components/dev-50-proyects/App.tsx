@@ -1,98 +1,62 @@
-import type { FC } from 'react';
+import { useState, type FC } from 'react';
+import style from './App.module.css'
 import { Mermaid } from './Mermaid';
 import { MapInteractionCSS } from 'react-map-interaction';
 
 declare global {
   interface Window { callback: any; }
+
 }
+
+
+
+
 const diagramClass = `
-classDiagram
-  class Desarrollador {
-      +Habilidades
-      +Experiencia
-  }
-  class Kotlin {
-      +Habilidades
-      +Experiencia
-  }
-  class JetpackCompose {
-      +Habilidades
-      +Experiencia
-  }
-  class Django {
-      +Habilidades
-      +Experiencia
-  }
-  class NestJS {
-      +Habilidades
-      +Experiencia
-  }
-  class NodeJS {
-      +Habilidades
-      +Experiencia
-  }
-  class SocketIO {
-      +Habilidades
-      +Experiencia
-  }
-  class ArquitecturaHexagonal {
-      +Habilidades
-      +Experiencia
-  }
-  class BancoDeVenezuela {
-      +Proyectos
-      +Responsabilidades
-  }
-  class Banplus {
-      +Proyectos
-      +Responsabilidades
-  }
-  class Bancaribe {
-      +Proyectos
-      +Responsabilidades
-  }
-  class SmsPago {
-      +Proyectos
-      +Responsabilidades
-  }
-  Desarrollador -- Kotlin: Tiene habilidades en
-  Desarrollador -- JetpackCompose: Tiene habilidades en
-  Desarrollador -- Django: Tiene habilidades en
-  Desarrollador -- NestJS: Tiene habilidades en
-  Desarrollador -- NodeJS: Tiene habilidades en
-  Desarrollador -- SocketIO: Tiene habilidades en
-  Desarrollador -- ArquitecturaHexagonal: Tiene habilidades en
-  Kotlin -- BancoDeVenezuela: Ha trabajado en
-  Kotlin -- Banplus: Ha trabajado en
-  Kotlin -- Bancaribe: Ha trabajado en
-  Django -- BancoDeVenezuela: Ha trabajado en
-  Django -- Banplus: Ha trabajado en
-  Django -- Bancaribe: Ha trabajado en
-  NestJS -- SmsPago: Ha trabajado en
-  NodeJS -- SmsPago: Ha trabajado en
-  SocketIO -- SmsPago: Ha trabajado en
-  ArquitecturaHexagonal -- SmsPago: Ha trabajado en
+graph LR
+   A[Experiencia]
+   B[Habilidades]
+   C[Educación]
+   D[Certificaciones]
+   A -->|Disglobal| E[Reducción de empleados, Aceleración del tiempo de desarrollo, Stack tecnológico]
+   A -->|Seccussu| F[Desarrollo de plataforma web, Stack tecnológico]
+   A -->|Danielapp| G[Mejora del sistema de la tienda virtual, Stack tecnológico]
+   A -->|Ardecon| H[Creación de página web, Stack tecnológico]
+   A -->|Sistema de Gestión| I[Optimización de recursos, Stack tecnológico]
+   A -->|Yafuzgame| J[Desarrollo de juego NFT, Stack tecnológico]
+   B --> K[Lenguajes de Programación, Herramientas de Frameworks, Base de Datos, Herramientas]
+   C --> L[Análisis y desarrollo de sistemas de información]
+   D --> M[Android Avanzado con Kotlin, Curso de desarrollo de Videojuegos NFT, Programación de Aplicaciones para Android con Kotlin, Django REST Framework, Next.js]
 
 
 `;
+
 
 interface props {
   children?: React.ReactNode
 }
 
 const AppSection: FC<props> = ({ }) => {
-  window.callback = async function (e: any) {
-    console.log(e)
-  }
+  const [position, setPosition] = useState({
+    value: {
+      scale: 1,
+      translation: { x: 100, y: 200 }
+    }
+  })
+
   return (
 
     <div className='w-screen h-screen mt-[6rem]'>
-      <MapInteractionCSS>
+
+      <MapInteractionCSS
+        value={position.value}
+        onChange={(value: any) => setPosition({ value })}
+      >
         <Mermaid chart={diagramClass} />
       </MapInteractionCSS>
 
     </div>
   )
 }
+
 
 export default AppSection
