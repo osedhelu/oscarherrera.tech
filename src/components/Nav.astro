@@ -2,6 +2,7 @@
 import Icon from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import type { iconPaths } from "./IconPaths";
+import MiLogo from "./MiLogo.astro";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -32,12 +33,7 @@ const iconLinks: {
 <nav>
   <div class="menu-header">
     <a href="/" astro-history-prevent="reload" class="site-title">
-      <Icon
-        icon="terminal-window"
-        color="var(--accent-regular)"
-        size="1.6em"
-        gradient
-      />
+      <MiLogo />
        Oscar Herrera
     </a>
     <menu-button>
