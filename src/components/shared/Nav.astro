@@ -1,0 +1,25 @@
+---
+import Icon from "./Icons/Icon.astro";
+---
+
+<div class="fixed bottom-2 lg:bottom-8 w-full overflow-hidden">
+  <div class="container mx-auto">
+    <div
+      class="flex bg-black/20 rounded-full mx-auto max-w-[460px] justify-between px-5 h-[65px] items-center"
+    >
+      <a
+        href="#home"
+        class="active w-[60px] h-[60px] flex items-center"
+        astro-data-history="replace"
+      >
+        <Icon icon="youtube-logo" size="8" />
+      </a>
+      <a href="#about" astro-data-history="replace">
+        <Icon icon="youtube-logo" size="8" />
+      </a>
+      <a href="#services">
+        <Icon icon="youtube-logo" size="8" />
+      </a>
+    </div>
+  </div>
+</div>
