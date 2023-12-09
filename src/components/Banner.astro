@@ -1,3 +1,27 @@
+---
+import { BannerJsx } from "./react/ui/BannerJsx";
+---
+
 <section class="section" id="home">
-    <h1>My Banner</h1>
+    <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+            <div>
+                <BannerJsx client:only />
+            </div>
+            <div>
+                <img
+                    src="/assets/portrait.jpeg"
+                    id="img-border"
+                    class="rounded-full w-[400px]"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
 </section>
+<style>
+    #img-border {
+        border-radius: 74% 23% 58% 39% / 55% 56% 42% 41%;
+        overflow: hidden;
+    }
+</style>
