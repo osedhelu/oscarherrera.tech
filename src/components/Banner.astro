@@ -1,14 +1,17 @@
 ---
 import { dataMyInfo } from "@/config/myInfo";
-import { TextAnimation } from "./react/ui/TextAnimation";
-import Icon from "./shared/Icons/Icon.astro";
 import { Iconsjsx } from "./react/ui/Icons";
+import { TextAnimation } from "./react/ui/TextAnimation";
 ---
 
 <section class="section" id="home">
     <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row grap-y-8 lg:items-center lg:grap-x-12">
-            <div class="flex-1 text-center lg:text-left font-secondary">
+        <div
+            class="flex flex-col lg:flex-row grap-y-8 lg:items-center lg:grap-x-12"
+        >
+            <div
+                class="fadeInOut flex-1 text-center lg:text-left font-secondary"
+            >
                 <h1 class="text-[55px] font-bold leading-[0.8] lg:text-[90px]">
                     Hola, Soy {dataMyInfo.name}
                     <span>{dataMyInfo.lastName}</span>
@@ -17,11 +20,15 @@ import { Iconsjsx } from "./react/ui/Icons";
                 <p class="mb-8 max-w-lg mx-auto lg:mx-0">
                     {dataMyInfo.description}
                 </p>
-                <div class="flex gap-4 max-w-max  items-center mb-12 mx-auto">
-                    <a class="btn btn-lg flex items-center" href="https://api.whatsapp.com/send?phone=573017982676" target="_blank">Contactame</a>
+                <div class="flex gap-4 max-w-max items-center mb-12 mx-auto">
+                    <a
+                        class="btn btn-lg flex items-center"
+                        href="https://api.whatsapp.com/send?phone=573017982676"
+                        target="_blank">Contactame</a
+                    >
                     <a href="#" class="text-gradient btn-link">Mi portafolio</a>
                 </div>
-                <div class="flex gap-x-6 max-w-max  mx-auto lg:mx-0">
+                <div class="flex gap-x-6 max-w-max mx-auto lg:mx-0">
                     {
                         dataMyInfo.socials.map((social) => (
                             <a href={social.href} target="_blank">
@@ -46,5 +53,24 @@ import { Iconsjsx } from "./react/ui/Icons";
     #img-border {
         border-radius: 74% 23% 58% 39% / 55% 56% 42% 41%;
         overflow: hidden;
+    }
+
+    @keyframes fadeInOutAnimation {
+        0% {
+            opacity: 0;
+            transform: translate3d(
+                0,
+                -100px,
+                0
+            ); /* ADDED - start x position as -50px */
+        }
+        100% {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .fadeInOut {
+        animation: fadeInOutAnimation 1.5s;
     }
 </style>
