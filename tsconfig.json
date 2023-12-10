@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "/Users/deoslv/portafolio/oscarherrera.tech",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
