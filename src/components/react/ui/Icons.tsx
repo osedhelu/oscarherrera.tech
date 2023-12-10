@@ -1,6 +1,5 @@
 import { iconPaths } from '@/components/shared/Icons/IconPaths'
-import type { FC, HTMLAttributes } from 'react'
-import style from './Icons.module.css'
+import type { FC } from 'react'
 
 interface Props {
   icon: keyof typeof iconPaths

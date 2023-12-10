@@ -1,9 +1,4 @@
 import { useEffect, useState } from 'react'
-
-interface DarkSideProps {
-  // Define any props needed by the component
-}
-
 export const useDarkSide = (): [
   string,
   React.Dispatch<React.SetStateAction<string>>

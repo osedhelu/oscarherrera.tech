@@ -8,7 +8,7 @@ export const useScrollSection = () => {
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop
-      if (window.pageYOffset >= sectionTop - 60) {
+      if (window?.pageYOffset >= sectionTop - 60) {
         setCurrentSection(section.getAttribute('id') as string)
       }
     })
