@@ -1,12 +1,35 @@
 ---
-import { BannerJsx } from "./react/ui/BannerJsx";
+import { dataMyInfo } from "@/config/myInfo";
+import { TextAnimation } from "./react/ui/TextAnimation";
+import Icon from "./shared/Icons/Icon.astro";
+import { Iconsjsx } from "./react/ui/Icons";
 ---
 
 <section class="section" id="home">
     <div class="container mx-auto">
-        <div class="flex items-center justify-between">
-            <div>
-                <BannerJsx client:only />
+        <div class="flex flex-col lg:flex-row grap-y-8 lg:items-center lg:grap-x-12">
+            <div class="flex-1 text-center lg:text-left font-secondary">
+                <h1 class="text-[55px] font-bold leading-[0.8] lg:text-[90px]">
+                    Hola, Soy {dataMyInfo.name}
+                    <span>{dataMyInfo.lastName}</span>
+                </h1>
+                <TextAnimation client:only />
+                <p class="mb-8 max-w-lg mx-auto lg:mx-0">
+                    {dataMyInfo.description}
+                </p>
+                <div class="flex gap-4 max-w-max  items-center mb-12 mx-auto">
+                    <a class="btn btn-lg flex items-center" href="https://api.whatsapp.com/send?phone=573017982676" target="_blank">Contactame</a>
+                    <a href="#" class="text-gradient btn-link">Mi portafolio</a>
+                </div>
+                <div class="flex gap-x-6 max-w-max  mx-auto lg:mx-0">
+                    {
+                        dataMyInfo.socials.map((social) => (
+                            <a href={social.href} target="_blank">
+                                <Iconsjsx icon={social.icon} />
+                            </a>
+                        ))
+                    }
+                </div>
             </div>
             <div>
                 <img

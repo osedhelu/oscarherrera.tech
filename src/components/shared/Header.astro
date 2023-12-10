@@ -1,5 +1,6 @@
 ---
 import { ThemeTogglejsx } from "../react/ui/ThemeToggle/ThemeToggle";
+import { dataMyInfo } from "@/config/myInfo";
 import OsedheluLogo from "./Icons/OsedheluLogo.astro";
 ---
 
@@ -9,11 +10,12 @@ import OsedheluLogo from "./Icons/OsedheluLogo.astro";
   <div class="container mx-auto">
     <div class="flex justify-between items-center">
       <!-- logo -->
-      <a href="#">
+      <a href="/" data-astro-reload>
         <OsedheluLogo />
       </a>
       <div class="flex gap-4 items-center">
-        <button class="btn btn-sm h-8">Mi CV</button>
+        <a class="btn btn-sm h-8 text-center items-center flex" href={dataMyInfo.cv} target="_blank">
+          Mi CV</a>
         <ThemeTogglejsx client:only />
       </div>
     </div>
