@@ -8,7 +8,7 @@ interface props {
 }
 export const TextAnimation: FC<props> = ({}) => {
   return (
-    <div className='mb-6 text-[36px] lg:text-[60px] font-secundary font-semibold uppercase leading-[1.2]'>
+    <>
       <span className='mr-4'>soy </span>
       <TypeAnimation
         sequence={dataMyInfo.job}
@@ -17,6 +17,6 @@ export const TextAnimation: FC<props> = ({}) => {
         speed={50}
         repeat={Infinity}
       />
-    </div>
+    </>
   )
 }

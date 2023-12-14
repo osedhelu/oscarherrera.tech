@@ -1,9 +1,23 @@
 ---
-
+import CountUp from "@/components/react/ui/CountUp";
 ---
 
 <section class="section" id="about">
-  <div class="justify-center items-center mx-auto text-white bg-black">
-    <h1 class="font-bold text-3xl">About</h1>
+  <div class="container mx-auto">
+    <div>
+      <div
+        class="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten
+    bg-top"
+      >
+        img
+      </div>
+      <div class="flex-1 my-40">
+        <div class="flex mx-auto justify-center items-center">
+          <p class="text-5xl font-tertiary text-gradient">
+            <CountUp start={300} end={3100} client:visible />
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

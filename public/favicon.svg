@@ -9,10 +9,10 @@
 >
   <style type="text/css">
     .blackclass {
-      fill: #ffffff;
+      fill: #6448a5;
     }
     .widthClass {
-      fill: #000000;
+      fill: #d20ab1;
     }
     .escudoBorder {
       fill: #5c5c5c;
