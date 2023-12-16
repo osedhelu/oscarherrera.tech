@@ -1,25 +1,29 @@
-import type { iconPaths } from '@/components/shared/Icons/IconPaths'
+import type { dataIcon } from '@/components/react/ui/Logo/nav.data'
 
 interface iNavbar {
   path: string
-  Icon: keyof typeof iconPaths
+  Icon: keyof typeof dataIcon
 }
 export const NavData: iNavbar[] = [
   {
     path: 'home',
-    Icon: 'heart'
+    Icon: 'home'
   },
   {
     path: 'about',
-    Icon: 'pencil-line'
+    Icon: 'user'
   },
   {
     path: 'services',
-    Icon: 'linkedin-logo'
+    Icon: 'project'
   },
 
   {
     path: 'work',
-    Icon: 'dribbble-logo'
+    Icon: 'works'
+  },
+  {
+    Icon: 'contact',
+    path: 'contact'
   }
 ]

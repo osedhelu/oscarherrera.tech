@@ -27,7 +27,7 @@ const CountUp: FC<props> = ({ end, start = 0 }) => {
       setCount(result) // Update the count state
       ref.current = result // Update the ref value
     }
-    setTimeout(updateCounterState, 10) // Schedule the next update after 1 second
+    setTimeout(updateCounterState, 100) // Schedule the next update after 1 second
   }
 
   useEffect(() => {

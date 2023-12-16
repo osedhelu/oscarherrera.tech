@@ -30,7 +30,7 @@ export default {
       backgroundImage: {
         site: "url('/assets/site-bg.jpg')",
         sitelight: "url('/assets/bg-main-light-800w.jpg')",
-        about: "url('/favicon.svg')",
+        about: "url('/assets/about.png')",
         services: "url('/assets/services.png')"
       }
     }

@@ -1,5 +1,9 @@
 import type { iconPaths } from '@/components/shared/Icons/IconPaths'
 
+interface ExperienceProps {
+  title: string
+  ano: number
+}
 interface Props {
   name: string
   lastName: string
@@ -8,8 +12,9 @@ interface Props {
     href: string
     icon: keyof typeof iconPaths
   }[]
-  cv: string,
+  cv: string
   job: (string | number)[]
+  experience: ExperienceProps[]
 }
 
 export const dataMyInfo: Props = {
@@ -27,7 +32,7 @@ export const dataMyInfo: Props = {
     1000
   ],
   description:
-    'Con experiencia en el desarrollo de aplicaciones móviles y web. He trabajado en proyectos que han acelerado el tiempo de desarrollo',
+    'Soy un desarrollador full stack con experiencia en el desarrollo de aplicaciones móviles y web. Tengo habilidades avanzadas en Node.js, Kotlin, Python, Angular, Next.js, Nest.js, Django, Solidity y Mongo. También tengo conocimientos en MySQL, SQL Server y PostgreSQL. Soy un hablante nativo de español con habilidades básicas en inglés.',
   socials: [
     {
       href: 'https://www.linkedin.com/in/osedhelu/',
@@ -40,6 +45,20 @@ export const dataMyInfo: Props = {
     {
       href: 'https://twitter.com/osedhelu',
       icon: 'twitter-logo'
+    }
+  ],
+  experience: [
+    {
+      ano: 4,
+      title: 'Años de<br/> experiencia '
+    },
+    {
+      ano: 12,
+      title: 'Proyectos <br/> realizados'
+    },
+    {
+      ano: 20,
+      title: 'Clientes <br/> satisfechos'
     }
   ]
 }

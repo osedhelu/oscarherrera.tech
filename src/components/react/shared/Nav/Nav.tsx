@@ -2,6 +2,7 @@ import { type FC } from 'react'
 import { useScrollSection } from './useScrollSection'
 import { Iconsjsx } from '../../ui/Icons'
 import { NavData } from '@/config/navData'
+import { SvgComponent } from '../../ui/Logo'
 interface props {
   children?: React.ReactNode
 }
@@ -20,7 +21,13 @@ export const Navjsx: FC<props> = ({}) => {
                 currentSection === item.path ? 'active' : 'p-4'
               }`}
             >
-              <Iconsjsx icon={item.Icon} />
+              {/* <Iconsjsx icon={item.Icon} /> */}
+              <SvgComponent
+                nameIcon={item.Icon}
+                props={{
+                  className: 'stroke-white w-[30px] h-[30px] fill-white'
+                }}
+              />
             </a>
           ))}
         </div>
