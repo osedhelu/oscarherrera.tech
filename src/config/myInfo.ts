@@ -45,6 +45,10 @@ export const dataMyInfo: Props = {
     {
       href: 'https://twitter.com/osedhelu',
       icon: 'twitter-logo'
+    },
+    {
+      href: 'https://codeium.com/profile/osedhelu',
+      icon: 'code'
     }
   ],
   experience: [
