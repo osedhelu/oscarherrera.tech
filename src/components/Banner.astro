@@ -2,6 +2,8 @@
 import { dataMyInfo } from "@/config/myInfo";
 import { Iconsjsx } from "./react/ui/Icons";
 import { TextAnimation } from "./react/ui/TextAnimation";
+import { TitleBanner } from "./react/shared/Banner/Title";
+import { ImgBanner } from "./react/shared/Banner/Image";
 ---
 
 <section class="section" id="home" class="flex items-center">
@@ -10,12 +12,13 @@ import { TextAnimation } from "./react/ui/TextAnimation";
             class="flex flex-col lg:flex-row grap-y-8 lg:items-center lg:grap-x-12"
         >
             <div class="flex-1 text-center lg:text-left font-secondary">
-                <h1
-                    class="fadeInUp text-[55px] font-bold leading-[0.8] lg:text-[90px]"
+                <TitleBanner
+                    client:load
+                    className="fadeInUp text-[55px] font-bold leading-[0.8] lg:text-[90px]"
                 >
                     Hola, Soy {dataMyInfo.name}
                     <span>{dataMyInfo.lastName}</span>
-                </h1>
+                </TitleBanner>
                 <div
                     class="fadeInUp mb-6 text-[36px] lg:text-[60px] font-secundary font-semibold uppercase leading-[1.2]"
                 >
@@ -45,12 +48,7 @@ import { TextAnimation } from "./react/ui/TextAnimation";
                 </div>
             </div>
             <div class="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]">
-                <img
-                    src="/assets/portrait.jpeg"
-                    id="img-border"
-                    class="fadeInDown rounded-full w-[400px]"
-                    alt=""
-                />
+                <ImgBanner client:only />
             </div>
         </div>
     </div>

@@ -23,7 +23,13 @@ export const Abouts: FC<props> = ({}) => {
           viewport={{ once: false, amount: 0.3 }}
           className='flex-1 bg-about bg-contain bg-no-repeat h-[40px] lg:h-[400px] bg-top mix-blend-lighten'
         ></motion.div>
-        <div className='flex-1'>
+        <motion.div
+          variants={fadeIn('left', 0.3)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.3 }}
+          className='flex-1'
+        >
           <h2 className='text-[20px] lg:h2 text-accent'>About </h2>
           <h3 className='text-[15px] lg:h3 mb-4'>
             Yo soy un freelancer front-end developer com mas de 10 años de
@@ -54,7 +60,7 @@ export const Abouts: FC<props> = ({}) => {
               Mi portafolio
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

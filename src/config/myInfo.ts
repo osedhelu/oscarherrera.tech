@@ -32,7 +32,7 @@ export const dataMyInfo: Props = {
     1000
   ],
   description:
-    'Soy un desarrollador full stack con experiencia en el desarrollo de aplicaciones móviles y web. Tengo habilidades avanzadas en Node.js, Kotlin, Python, Angular, Next.js, Nest.js, Django, Solidity y Mongo. También tengo conocimientos en MySQL, SQL Server y PostgreSQL. Soy un hablante nativo de español con habilidades básicas en inglés.',
+    'Construyendo experiencias completas desde el front-end hasta el back-end, dejando una huella tecnológica en cada proyecto.',
   socials: [
     {
       href: 'https://www.linkedin.com/in/osedhelu/',
