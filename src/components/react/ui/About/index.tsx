@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import { useInView } from 'react-intersection-observer'
 import CountUp from '../CountUp'
+import style from './About.module.css'
 import { dataMyInfo } from '@/config/myInfo'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/config/variants'
@@ -21,7 +22,7 @@ export const Abouts: FC<props> = ({}) => {
           initial='hidden'
           whileInView={'show'}
           viewport={{ once: false, amount: 0.3 }}
-          className='flex-1 bg-about bg-contain bg-no-repeat h-[40px] lg:h-[400px] bg-top mix-blend-lighten'
+          className={`flex-1 ${style.img_border} bg-about bg-contain bg-no-repeat h-[40px] lg:h-[400px] bg-top mix-blend-saturation dark:mix-blend-lighten`}
         ></motion.div>
         <motion.div
           variants={fadeIn('left', 0.3)}
@@ -30,17 +31,11 @@ export const Abouts: FC<props> = ({}) => {
           viewport={{ once: false, amount: 0.3 }}
           className='flex-1'
         >
-          <h2 className='text-[20px] lg:h2 text-accent'>About </h2>
-          <h3 className='text-[15px] lg:h3 mb-4'>
-            Yo soy un freelancer front-end developer com mas de 10 años de
-            experiencia.
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            dignissimos sapiente alias sit. Pariatur corporis ullam laborum quia
-            quidem consequatur in tempore, alias minus molestiae obcaecati quas,
-            labore autem omnis.
-          </p>
+          <h2 className='text-[20px] lg:h2 text-accent'>
+            {dataMyInfo.titleAbout}
+          </h2>
+          <h3 className='text-[15px] lg:h3 mb-4'>Full Stack Developer</h3>
+          <p>{dataMyInfo.description2}</p>
           <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
             {dataMyInfo.experience.map(item => (
               <div key={item.title}>
