@@ -37,7 +37,7 @@ export const dataMyInfo: Props = {
   description:
     'Construyendo experiencias completas desde el front-end hasta el back-end, dejando una huella tecnológica en cada proyecto.',
   description2:
-    'Con 4 años de trayectoria como desarrollador full stack, he puesto en práctica métodos efectivos y enfoques ágiles para asegurar resultados de calidad y eficiencia en cada proyecto.',
+    'Con 4 años de trayectoria, he puesto en práctica métodos efectivos y enfoques ágiles para asegurar resultados de calidad y eficiencia en cada proyecto.',
   socials: [
     {
       href: 'https://www.linkedin.com/in/osedhelu/',

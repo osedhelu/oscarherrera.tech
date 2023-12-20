@@ -18,11 +18,11 @@ export const Abouts: FC<props> = ({}) => {
     <div className='container mx-auto mt-[80px] lg:mt-[0px]' ref={ref}>
       <div className='flex flex-col gap-y-4 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
         <motion.div
-          variants={fadeIn('right', 0.3)}
+          variants={fadeIn('right', 0.03)}
           initial='hidden'
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.3 }}
-          className={`flex-1 ${style.img_border} bg-about bg-contain bg-no-repeat h-[40px] lg:h-[400px] bg-top mix-blend-saturation dark:mix-blend-lighten`}
+          viewport={{ once: false, amount: 0.03 }}
+          className={`flex-1 ${style.img_border} bg-about bg-contain bg-no-repeat h-[40px] lg:h-[400px] bg-top mix-blend-luminosity dark:mix-blend-lighten`}
         ></motion.div>
         <motion.div
           variants={fadeIn('left', 0.3)}

@@ -4,6 +4,7 @@
   --theme-transition: ;
 }
 .button {
+  overflow-x: hidden;
   display: flex;
   border: 0;
   border-radius: 999rem;
@@ -32,7 +33,7 @@
   position: absolute;
   inset: 0;
   @apply bg-[#000000];
-  border-radius: 999rem;
+  border-radius: 999px;
   /* @apply transform ease-out duration-300 transition; */
   animation: mymove 0.5s;
   animation-fill-mode: forwards;
@@ -52,3 +53,5 @@
     @apply dark:left-[50px] dark:ml-[9px] dark:w-[10px] right-[0px] mr-[0%];
   }
 }
+
+

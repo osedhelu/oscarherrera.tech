@@ -4,6 +4,8 @@ import { Iconsjsx } from "./react/ui/Icons";
 import { TextAnimation } from "./react/ui/TextAnimation";
 import { TitleBanner } from "./react/shared/Banner/Title";
 import { ImgBanner } from "./react/shared/Banner/Image";
+import { useTranslations } from "@/i18n/utils";
+const t = useTranslations(Astro.url);
 ---
 
 <section class="section" id="home" class="flex items-center">
@@ -14,13 +16,16 @@ import { ImgBanner } from "./react/shared/Banner/Image";
             <div class="flex-1 text-center lg:text-left font-secondary">
                 <TitleBanner
                     client:load
-                    className="fadeInUp text-[55px] font-bold leading-[0.8] lg:text-[90px]"
+                    className=" text-[55px] font-bold leading-[0.8] lg:text-[90px] overflow-hidden"
                 >
-                    Hola, Soy {dataMyInfo.name}
+                    {t("banner.hello")}
+                    {" "}
+                    {dataMyInfo.name}
+                    {" "}
                     <span>{dataMyInfo.lastName}</span>
                 </TitleBanner>
                 <div
-                    class="fadeInUp mb-6 text-[36px] lg:text-[60px] font-secundary font-semibold uppercase leading-[1.2]"
+                    class="mb-6 text-[36px] lg:text-[60px] font-secundary font-semibold uppercase leading-[1.2] overflow-hidden"
                 >
                     <TextAnimation client:only />
                 </div>
@@ -33,9 +38,11 @@ import { ImgBanner } from "./react/shared/Banner/Image";
                     <a
                         class="btn btn-lg flex items-center"
                         href="https://api.whatsapp.com/send?phone=573017982676"
-                        target="_blank">Contactame</a
+                        target="_blank">{t("banner.contact")}</a
                     >
-                    <a href="#" class="text-gradient btn-link">Mi portafolio</a>
+                    <a href="#" class="text-gradient btn-link"
+                        >{t("banner.portfolio")}</a
+                    >
                 </div>
                 <div class="flex gap-x-6 max-w-max mx-auto lg:mx-0">
                     {

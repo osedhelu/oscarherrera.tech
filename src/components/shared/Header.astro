@@ -2,10 +2,13 @@
 import { ThemeTogglejsx } from "../react/ui/ThemeToggle/ThemeToggle";
 import { dataMyInfo } from "@/config/myInfo";
 import OsedheluLogo from "./Icons/OsedheluLogo.astro";
+import { useTranslations } from "@/i18n/utils";
+
+const t = useTranslations(Astro.url);
 ---
 
 <header
-  class="fixed w-full top-0 bg-pink-300/20 dark:bg-pink-300/9 backdrop-blur-md py-5"
+  class="fixed w-full z-50 top-0 bg-pink-300/20 dark:bg-pink-300/9 backdrop-blur-md py-5"
 >
   <div class="container mx-auto">
     <div class="flex justify-between items-center">
@@ -20,7 +23,7 @@ import OsedheluLogo from "./Icons/OsedheluLogo.astro";
           href={dataMyInfo.cv}
           target="_blank"
         >
-          Mi CV</a
+          {t("nav.cv")}</a
         >
         <ThemeTogglejsx client:only />
       </div>

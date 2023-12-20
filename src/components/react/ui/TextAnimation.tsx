@@ -1,7 +1,6 @@
+import { dataMyInfo } from '@/config/myInfo'
 import { type FC } from 'react'
 import { TypeAnimation } from 'react-type-animation'
-import { dataMyInfo } from '@/config/myInfo'
-import { Iconsjsx } from './Icons'
 
 interface props {
   children?: React.ReactNode
@@ -9,12 +8,11 @@ interface props {
 export const TextAnimation: FC<props> = ({}) => {
   return (
     <>
-      <span className='mr-4'>soy </span>
+      <span className='mr-4 text-3xl'>soy </span>
       <TypeAnimation
         sequence={dataMyInfo.job}
-        className='text-accent'
-        wrapper='span'
-        speed={50}
+        className='text-accent text-3xl'
+        wrapper='span' speed={50}
         repeat={Infinity}
       />
     </>

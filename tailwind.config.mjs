@@ -28,10 +28,10 @@ export default {
         accent: '#B809C3'
       },
       backgroundImage: {
-        site: "url('/assets/site-bg.jpg')",
+        site: "url('/assets/site-bg.svg')",
         sitelight: "url('/assets/bg-main-light-800w.jpg')",
         about: "url('/assets/about.png')",
-        services: "url('/assets/services.png')"
+        services: "url('/assets/services.svg')"
       }
     }
   },

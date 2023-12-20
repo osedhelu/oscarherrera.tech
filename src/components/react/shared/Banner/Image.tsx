@@ -9,17 +9,11 @@ interface props {
 
 export const ImgBanner: FC<props> = ({ children }) => {
   return (
-    <motion.img
-      variants={fadeIn('left', 0.3)}
-      initial='hidden'
-      whileInView={'show'}
-      viewport={{ once: false, amount: 0.3 }}
+    <img
       className={`rounded-full w-[400px] ${style.img_border}`}
       src='/assets/portrait.jpeg'
       id='img-border'
       alt=''
-    >
-      {children}
-    </motion.img>
+    />
   )
 }

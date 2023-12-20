@@ -1,6 +1,8 @@
 ---
 import { Navjsx } from "@/components/react/shared/Nav/Nav";
 import MainHead from "@/components/shared/Metadata/MainHead.astro";
+import { getLangFromUrl } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
 
 interface Props {
   title?: string | undefined;
@@ -10,35 +12,11 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang={lang}>
   <head>
     <MainHead title={title} description={description} />
   </head>
-  <body
-    class="bg-sitelight dark:bg-site bg-no-repeat bg-cover text-black dark:text-white"
-  >
-    <div class="h-[90px] md:h-[0px]"></div>
-    <Navjsx client:only />
+  <body class="bg-site bg-no-repeat">
     <slot />
-    <div class="h-[4000px]">hola</div>
-    <!-- <style is:global>
-      html,
-      body,
-      section {
-        block-size: 100%;
-      }
-
-      html {
-        scroll-snap-type: y mandatory;
-      }
-
-      .section {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    </style> -->
   </body>
 </html>
