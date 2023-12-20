@@ -8,5 +8,15 @@ interface props {
 }
 
 export const TitleBanner: FC<props> = ({ className, children }) => {
-  return <motion.h1 className={className}>{children}</motion.h1>
+  return (
+    <motion.h1
+      variants={fadeIn('right', 0.03)}
+      initial='hidden'
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.03 }}
+      className={className}
+    >
+      {children}
+    </motion.h1>
+  )
 }

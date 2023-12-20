@@ -16,7 +16,7 @@ export const Abouts: FC<props> = ({}) => {
 
   return (
     <div className='container mx-auto mt-[80px] lg:mt-[0px]' ref={ref}>
-      <div className='flex flex-col gap-y-4 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
+      <div className='flex flex-col gap-y-4 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen overflow-hidden'>
         <motion.div
           variants={fadeIn('right', 0.03)}
           initial='hidden'
