@@ -29,7 +29,7 @@ export default {
       },
       backgroundImage: {
         site: "url('/assets/site-bg.svg')",
-        sitelight: "url('/assets/bg-main-light-800w.jpg')",
+        sidelight: "url('/assets/site-bg-light.svg')",
         about: "url('/assets/about.png')",
         services: "url('/assets/services.svg')"
       }
