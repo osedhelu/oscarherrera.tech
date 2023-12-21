@@ -1,4 +1,5 @@
 import { fadeIn } from '@/config/variants'
+import { useTranslations } from '@/i18n/utils'
 import { motion } from 'framer-motion'
 import { type FC } from 'react'
 
@@ -38,16 +39,20 @@ const services = [
   }
 ]
 export const ServicesJSX: FC<props> = ({}) => {
+  const t = useTranslations({ state: 'react' })
+
   return (
-    <div className='flex gap-x-10 flex-col lg:flex-row'>
+    <div className='flex gap-x-20 flex-col lg:flex-row lg:between'>
       <div className=''>
         <div className='flex-1 lg:bg:bottom fill-blue-500'>
-          <h2 className='h2 text-accent mb-6'>Educación</h2>
-          <h3 className='h3 max-w-[455px] mb-16'>
-            I help bring your vision to life
+          <h2 className='text-[20px] lg:h2 text-accent mb-6'>
+            {t('services.title')}
+          </h2>
+          <h3 className='text-[15px] lg:h3 max-w-[455px] mb-16'>
+            {t('services.description')}
           </h3>
         </div>
-        <div className='bg-services bg-contain bg-no-repeat h-[400px]'></div>
+        <div className='bg-services bg-contain bg-no-repeat h-[200px] lg:h-[400px] my-[100px]'></div>
       </div>
       <div>
         <ol className='relative border-s border-gray-200 dark:border-gray-700'>

@@ -4,7 +4,7 @@ import { dataMyInfo } from "@/config/myInfo";
 import OsedheluLogo from "./Icons/OsedheluLogo.astro";
 import { useTranslations } from "@/i18n/utils";
 
-const t = useTranslations(Astro.url);
+const t = useTranslations({ url: Astro.url });
 ---
 
 <header

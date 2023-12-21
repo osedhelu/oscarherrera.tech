@@ -48,7 +48,7 @@ export const dataMyInfo: Props = {
       icon: 'github-logo'
     },
     {
-      href: 'https://twitter.com/osedhelu',
+      href: 'https://twitter.com/osedhelu12',
       icon: 'twitter-logo'
     },
     {

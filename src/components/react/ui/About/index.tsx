@@ -22,7 +22,7 @@ export const Abouts: FC<props> = ({}) => {
           initial='hidden'
           whileInView={'show'}
           viewport={{ once: false, amount: 0.03 }}
-          className={`flex-1 ${style.img_border} bg-about bg-contain bg-no-repeat h-[40px] lg:h-[400px] bg-top mix-blend-luminosity dark:mix-blend-lighten`}
+          className={`flex-1 ${style.img_border} bg-about bg-contain bg-no-repeat h-[10px] lg:h-[400px] bg-top  `}
         ></motion.div>
         <motion.div
           variants={fadeIn('left', 0.3)}

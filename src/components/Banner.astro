@@ -5,7 +5,7 @@ import { TextAnimation } from "./react/ui/TextAnimation";
 import { TitleBanner } from "./react/shared/Banner/Title";
 import { ImgBanner } from "./react/shared/Banner/Image";
 import { useTranslations } from "@/i18n/utils";
-const t = useTranslations(Astro.url);
+const t = useTranslations({ url: Astro.url });
 ---
 
 <section class="section" id="home" class="flex items-center">

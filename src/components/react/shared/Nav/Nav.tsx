@@ -20,7 +20,6 @@ export const Navjsx: FC<props> = ({}) => {
                 currentSection === item.path ? 'active' : 'p-4'
               }`}
             >
-              {/* <Iconsjsx icon={item.Icon} /> */}
               <SvgComponent
                 nameIcon={item.Icon}
                 props={{
@@ -31,36 +30,6 @@ export const Navjsx: FC<props> = ({}) => {
           ))}
         </div>
       </div>
-      {/* <div className={styles.container}>
-        <ul>
-          <li
-           
-          >
-            <a href='#home'>Inicio</a>
-          </li>
-          <li
-            className={`${styles.about} ${
-              currentSection === 'about' ? styles.active : ''
-            }`}
-          >
-            <a href='#about'>Acerca de</a>
-          </li>
-          <li
-            className={`${styles.contact} ${
-              currentSection === 'contact' ? styles.active : ''
-            }`}
-          >
-            <a href='#contact'>Contacto</a>
-          </li>
-          <li
-            className={`${styles.footer} ${
-              currentSection === 'footer' ? styles.active : ''
-            }`}
-          >
-            <a href='#footer'>Pie de página</a>
-          </li>
-        </ul>
-      </div> */}
     </div>
   )
 }

@@ -13,7 +13,10 @@ export const ui = {
     'nav.cv': 'My CV',
     'banner.hello': "Hi, I'm",
     'banner.contact': 'Contact me',
-    'banner.portfolio': 'Portfolio'
+    'banner.portfolio': 'Portfolio',
+    'services.title': 'Education',
+    'services.description':
+      'My education journey spans from elementary school to university'
   },
   es: {
     'nav.home': 'Inicio',
@@ -22,6 +25,9 @@ export const ui = {
     'nav.cv': 'Mi CV',
     'banner.hello': 'Hola, Soy',
     'banner.contact': 'Contactame',
-    'banner.portfolio': 'Mi Portafolio'
+    'banner.portfolio': 'Mi Portafolio',
+    'services.title': 'Educación',
+    'services.description':
+      'Mi trayectoria educativa abarca desde la escuela primaria hasta la universidad'
   }
 } as const

@@ -6,8 +6,14 @@ export function getLangFromUrl (url: URL) {
   return defaultLang
 }
 
-export function useTranslations (url: URL) {
-  const lang = getLangFromUrl(url) as keyof typeof ui
+interface Props {
+  url?: unknown
+  state?: 'react' | 'astro'
+}
+export function useTranslations ({ state = 'astro', url = null }: Props) {
+  const lang = getLangFromUrl(
+    state === 'astro' ? (url as URL) : new URL(window.location.href)
+  ) as keyof typeof ui
   return function t (key: keyof typeof ui[typeof defaultLang]) {
     return ui[lang][key] || ui[defaultLang][key]
   }
