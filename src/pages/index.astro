@@ -1,6 +1,5 @@
 ---
 import Banner from "@/components/Banner.astro";
-import Header from "@/components/shared/Header.astro";
 import Services from "@/components/Services.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Work from "../components/work.astro";
@@ -11,10 +10,9 @@ import { Navjsx } from "@/components/react/shared/Nav/Nav";
 
 <BaseLayout>
   <Navjsx client:only />
-  <Header />
   <Banner />
   <About />
   <Services />
   <Work />
-  <!-- <Contact /> -->
+  <Contact />
 </BaseLayout>

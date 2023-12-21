@@ -67,7 +67,10 @@ export const Abouts: FC<props> = ({}) => {
           <p>{t('about.title.3')}</p>
           <div className='flex gap-x-1 mb-[80px] '>
             {Object.values(skills_frontend).map((IconSvg, index) => (
-              <IconSvg key={`22${index}`} className='w-8 h-8' />
+              <IconSvg
+                key={`22${index}`}
+                className='w-8 h-8 dark:fill-white '
+              />
             ))}
           </div>
 

@@ -12,40 +12,47 @@ interface Props {
 const t = useTranslations({ url: Astro.url });
 const { title = t("meta.title"), description = t("meta.description") } =
   Astro.props;
+console.log(Astro.url.href);
 ---
 
 <meta charset="UTF-8" />
 <SEO
+  canonical={Astro.url.href}
   title={title}
   description={description}
   openGraph={{
     basic: {
+      url: Astro.url.href,
       title,
       type: "image/svg+xml",
-      image: "https://oscarherrera.tech/favicon.svg",
+      image: "https://oscarherrera.tech/favicon.ico",
     },
   }}
   twitter={{
     creator: "@osedhelu12",
+    description: description,
+    card: "summary_large_image",
+    image: "https://oscarherrera.tech/favicon.ico",
+    imageAlt: "Logo empresa osedhelu",
+    site: Astro.url.href,
+    title: title,
   }}
   extend={{
     link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
     meta: [
       {
         name: "twitter:image",
-        content: "https://oscarherrera.tech/favicon.svg",
+        content: "https://oscarherrera.tech/favicon.ico",
       },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
     ],
   }}
 />
-<meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
 <meta name="theme-color" content="#000000" />
 <title>{title}</title>
-
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

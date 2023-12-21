@@ -1,5 +1,6 @@
 ---
 import { Navjsx } from "@/components/react/shared/Nav/Nav";
+import Header from "@/components/shared/Header.astro";
 import MainHead from "@/components/shared/Metadata/MainHead.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
@@ -19,6 +20,7 @@ const { title = t("meta.title"), description = t("meta.description") } =
     <MainHead title={title} description={description} />
   </head>
   <body class="dark:bg-black bg-white bg-no-repeat text-black dark:text-white">
+    <Header />
     <slot />
   </body>
 </html>
