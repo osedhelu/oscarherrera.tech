@@ -2,8 +2,9 @@
 import { ThemeTogglejsx } from "../react/ui/ThemeToggle/ThemeToggle";
 import { dataMyInfo } from "@/config/myInfo";
 import OsedheluLogo from "./Icons/OsedheluLogo.astro";
-import { useTranslations } from "@/i18n/utils";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations({ url: Astro.url });
 ---
 
@@ -17,6 +18,28 @@ const t = useTranslations({ url: Astro.url });
         <OsedheluLogo />
       </a>
       <div class="flex gap-4 items-center">
+        <div>
+          {
+            lang === "en" ? (
+              <a
+                href="/"
+                data-astro-history="replace"
+                class="text-3xl text-center pt-2 items-center flex"
+              >
+                🇪🇸
+              </a>
+            ) : (
+              <a
+                href="/en"
+                data-astro-history="replace"
+                class="text-3xl text-center pt-2 items-center flex"
+              >
+                🇬🇧
+              </a>
+            )
+          }
+        </div>
+
         <a
           class="btn btn-sm h-8 text-center items-center flex"
           data-astro-reload
@@ -25,6 +48,7 @@ const t = useTranslations({ url: Astro.url });
         >
           {t("nav.cv")}</a
         >
+
         <ThemeTogglejsx client:only />
       </div>
     </div>
