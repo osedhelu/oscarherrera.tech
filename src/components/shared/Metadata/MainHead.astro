@@ -18,17 +18,14 @@ const { title = t("meta.title"), description = t("meta.description") } =
 
 <meta charset="UTF-8" />
 <meta http-equiv="etag" content="bcc81a7e8500db411d20c4d9f8a5f4b7d5922488" />
-<meta
-  name="msapplication-TileImage"
-  content="https://bin.bnbstatic.com/static/images/bnb-for/brand.png"
-/>
+<meta name="msapplication-TileImage" content={`${domain}/opengraph.png`} />
 <meta
   name="twitter:card"
   content="summary_large_image"
   data-shuvi-head="true"
 />
-<meta name="twitter:site" content="@BinanceAcademy" data-shuvi-head="true" />
-<meta name="twitter:creator" content="@BinanceAcademy" data-shuvi-head="true" />
+<meta name="twitter:site" content="@osedhelu12" data-shuvi-head="true" />
+<meta name="twitter:creator" content="@osedhelu12" data-shuvi-head="true" />
 <meta
   property="og:image:alt"
   content="Binance Academy"
@@ -81,24 +78,12 @@ const { title = t("meta.title"), description = t("meta.description") } =
   content="index,follow,max-image-preview:large"
   data-shuvi-head="true"
 />
-<meta
-  name="description"
-  content="Ethereum’s most iconic wallet, MetaMask, can be easily tweaked to support BNB Smart Chain. Learn how to get set up at Binance Academy."
-  data-shuvi-head="true"
-/>
-<meta
-  property="og:title"
-  content="Connecting MetaMask to BNB Smart Chain | Binance Academy"
-  data-shuvi-head="true"
-/>
-<meta
-  property="og:description"
-  content="Ethereum’s most iconic wallet, MetaMask, can be easily tweaked to support BNB Smart Chain. Learn how to get set up at Binance Academy."
-  data-shuvi-head="true"
-/>
+<meta name="description" content={description} data-shuvi-head="true" />
+<meta property="og:title" content={title} data-shuvi-head="true" />
+<meta property="og:description" content={description} data-shuvi-head="true" />
 <meta
   property="og:url"
-  content="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain"
+  content={`${domain}${Astro.url.pathname}`}
   data-shuvi-head="true"
 />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -108,19 +93,15 @@ const { title = t("meta.title"), description = t("meta.description") } =
 <meta property="og:type" content="article" data-shuvi-head="true" />
 <meta
   property="og:image"
-  content="https://public.bnbstatic.com/static/academy/uploads/fee279af050e4355a27f91ac5a911389.png"
+  content={`${domain}/opengraph.png`}
   data-shuvi-head="true"
 />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
 <ViewTransitions />
 <link
   href="https://fonts.googleapis.com/css2?family=Aldrich&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
   rel="stylesheet"
 />
-
-<!-- #region -->
-<head>
-  <!-- #endregion -->
-</head>
