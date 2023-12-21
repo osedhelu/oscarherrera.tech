@@ -8,6 +8,7 @@ interface Props {
   title?: string | undefined;
   description?: string | undefined;
 }
+const domain = "https://oscarherrera.tech";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations({ url: Astro.url });
@@ -21,30 +22,30 @@ console.log(Astro.url.href);
   titleTemplate="%s | Oscar Herrera | Portfolio"
   titleDefault="Oscar Herrera | Portfolio"
   charset="utf-8"
-  canonical={Astro.url.href}
+  canonical={domain}
   title={title}
   description={description}
   openGraph={{
     optional: { locale: lang, description, siteName: "Oscar Herrera" },
     basic: {
-      url: Astro.url.href,
+      url: domain,
       title,
       type: "image/svg+xml",
-      image: "https://oscarherrera.tech/favicon.ico",
+      image: domain + "/favicon.svg",
     },
     image: {
       width: 36,
       height: 36,
       alt: "Image Logo full stack developer",
-      secureUrl: "https://oscarherrera.tech/favicon.svg",
+      secureUrl: domain + "/favicon.svg",
       type: "image/svg+xml",
-      url: "https://oscarherrera.tech/favicon.svg",
+      url: domain + "/favicon.svg",
     },
     article: {
       authors: ["@osedhelu12"],
-      expirationTime: "2022-12-31T23:59:59+00:00",
-      modifiedTime: "2022-12-31T23:59:59+00:00",
-      publishedTime: "2022-12-31T23:59:59+00:00",
+      expirationTime: new Date().toISOString(),
+      modifiedTime: new Date().toISOString(),
+      publishedTime: new Date().toISOString(),
       section: "Technology",
       tags: [
         "Technology",
@@ -62,9 +63,9 @@ console.log(Astro.url.href);
     creator: "@osedhelu12",
     description: description,
     card: "summary_large_image",
-    image: "https://oscarherrera.tech/favicon.ico",
+    image: domain + "/favicon.ico",
     imageAlt: "Logo empresa osedhelu",
-    site: Astro.url.href,
+    site: domain,
     title: title,
   }}
   extend={{
@@ -72,7 +73,7 @@ console.log(Astro.url.href);
     meta: [
       {
         name: "twitter:image",
-        content: "https://oscarherrera.tech/favicon.ico",
+        content: domain + "/favicon.ico",
       },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
