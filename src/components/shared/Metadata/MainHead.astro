@@ -1,6 +1,4 @@
 ---
-import { SEO } from "astro-seo";
-
 import { ViewTransitions } from "astro:transitions";
 import "./styles/globas.css";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
@@ -101,6 +99,7 @@ const { title = t("meta.title"), description = t("meta.description") } =
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 <ViewTransitions />
+<meta http-equiv="refresh" content="0;url=/en/" />
 <link
   href="https://fonts.googleapis.com/css2?family=Aldrich&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
   rel="stylesheet"
