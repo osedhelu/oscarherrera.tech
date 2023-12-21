@@ -1,4 +1,6 @@
 ---
+import { SEO } from "astro-seo";
+
 import { ViewTransitions } from "astro:transitions";
 import "./styles/globas.css";
 interface Props {
@@ -13,7 +15,32 @@ const {
 ---
 
 <meta charset="UTF-8" />
-
+<SEO
+  title={title}
+  description={description}
+  openGraph={{
+    basic: {
+      title,
+      type: "A type.",
+      image: "https://oscarherrera.tech/favicon.svg",
+    },
+  }}
+  twitter={{
+    creator: "@osedhelu12",
+  }}
+  extend={{
+    link: [{ rel: "icon", href: "/favicon.svg" }],
+    meta: [
+      {
+        name: "twitter:image",
+        content:
+          "https://oscarherrera.tech/favicon.svg",
+      },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+    ],
+  }}
+/>
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
