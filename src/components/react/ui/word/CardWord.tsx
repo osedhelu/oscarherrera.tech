@@ -1,3 +1,4 @@
+import { useTranslations } from '@/i18n/utils'
 import { type FC } from 'react'
 
 interface props {
@@ -5,6 +6,7 @@ interface props {
   children?: React.ReactNode
   href: string
   img: string
+  titleState: string
 }
 
 export const CardWord: FC<props> = ({
@@ -21,8 +23,10 @@ export const CardWord: FC<props> = ({
   ),
   title,
   href,
-  img
+  img,
+  titleState
 }) => {
+  const t = useTranslations({ state: 'react' })
   return (
     <div className='relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
       <a
@@ -32,7 +36,7 @@ export const CardWord: FC<props> = ({
       >
         <img className='object-cover' src={img} alt='product image' />
         <span className='absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white'>
-          39% OFF
+          {titleState}
         </span>
       </a>
       <div className='mt-4 px-5 pb-5'>
@@ -41,7 +45,9 @@ export const CardWord: FC<props> = ({
         </a>
         <div className='mt-2 mb-5 flex items-center justify-between'>
           <p>
-            <span className='text-1xl font-bold text-slate-900'>skill</span>
+            <span className='text-1xl font-bold text-slate-900'>
+              {t('works.skills')}
+            </span>
           </p>
           <div className='flex items-center gap-2'>{children}</div>
         </div>
@@ -63,7 +69,7 @@ export const CardWord: FC<props> = ({
               d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z'
             ></path>
           </svg>
-          Add to cart
+          {t('works.view_project')}
         </a>
       </div>
     </div>

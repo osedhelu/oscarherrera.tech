@@ -20,9 +20,9 @@ const t = useTranslations({ url: Astro.url });
                 >
                     {t("banner.hello")}
                     {" "}
-                    {dataMyInfo.name}
+                    {t(dataMyInfo.name)}
                     {" "}
-                    <span>{dataMyInfo.lastName}</span>
+                    <span>{t(dataMyInfo.lastName)}</span>
                 </TitleBanner>
                 <div
                     class="mb-6 text-[36px] lg:text-[60px] font-secundary font-semibold uppercase leading-[1.2] overflow-hidden"
@@ -30,7 +30,7 @@ const t = useTranslations({ url: Astro.url });
                     <TextAnimation client:only />
                 </div>
                 <p class="mb-8 max-w-lg mx-auto lg:mx-0">
-                    {dataMyInfo.description}
+                    {t(dataMyInfo.description)}
                 </p>
                 <div
                     class="flex gap-4 lg:mx-0 max-w-max items-center mb-12 mx-auto"

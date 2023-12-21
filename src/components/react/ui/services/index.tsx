@@ -42,8 +42,14 @@ export const ServicesJSX: FC<props> = ({}) => {
   const t = useTranslations({ state: 'react' })
 
   return (
-    <div className='flex gap-x-20 flex-col lg:flex-row lg:between'>
-      <div className=''>
+    <div className='flex gap-x-20 flex-col lg:flex-row lg:between overflow-hidden'>
+      <motion.div
+        variants={fadeIn('right', 0.03)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.03 }}
+        className=''
+      >
         <div className='flex-1 lg:bg:bottom fill-blue-500'>
           <h2 className='text-[20px] lg:h2 text-accent mb-6'>
             {t('services.title')}
@@ -52,9 +58,14 @@ export const ServicesJSX: FC<props> = ({}) => {
             {t('services.description')}
           </h3>
         </div>
-        <div className='bg-services bg-contain bg-no-repeat h-[200px] lg:h-[400px] my-[100px]'></div>
-      </div>
-      <div>
+        <div className='hidden md:block bg-services bg-contain bg-no-repeat h-[200px] lg:h-[400px] my-[100px]'></div>
+      </motion.div>
+      <motion.div
+        variants={fadeIn('left', 0.03)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.03 }}
+      >
         <ol className='relative border-s border-gray-200 dark:border-gray-700'>
           {services.map((items, index) => {
             return (
@@ -86,7 +97,7 @@ export const ServicesJSX: FC<props> = ({}) => {
             )
           })}
         </ol>
-      </div>
+      </motion.div>
     </div>
   )
 }

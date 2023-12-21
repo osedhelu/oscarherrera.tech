@@ -1,10 +1,12 @@
+import { dataMyInfo } from '@/config/myInfo'
+import { fadeIn } from '@/config/variants'
+import { motion } from 'framer-motion'
 import { type FC } from 'react'
 import { useInView } from 'react-intersection-observer'
 import CountUp from '../CountUp'
 import style from './About.module.css'
-import { dataMyInfo } from '@/config/myInfo'
-import { motion } from 'framer-motion'
-import { fadeIn } from '@/config/variants'
+import { skills_backend, skills_frontend, skills_languages } from './logos'
+import { useTranslations } from '@/i18n/utils'
 interface props {
   children?: React.ReactNode
 }
@@ -14,6 +16,7 @@ export const Abouts: FC<props> = ({}) => {
     threshold: 0.5
   })
 
+  const t = useTranslations({ state: 'react' })
   return (
     <div className='container mx-auto mt-[80px] lg:mt-[0px]' ref={ref}>
       <div className='flex flex-col gap-y-4 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen overflow-hidden'>
@@ -32,10 +35,10 @@ export const Abouts: FC<props> = ({}) => {
           className='flex-1'
         >
           <h2 className='text-[20px] lg:h2 text-accent'>
-            {dataMyInfo.titleAbout}
+            {t(dataMyInfo.titleAbout)}
           </h2>
-          <h3 className='text-[15px] lg:h3 mb-4'>Full Stack Developer</h3>
-          <p>{dataMyInfo.description2}</p>
+          <h3 className='text-[15px] lg:h3 mb-4'>{t('about.description')}</h3>
+          <p>{t(dataMyInfo.description2)}</p>
           <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
             {dataMyInfo.experience.map(item => (
               <div key={item.title}>
@@ -44,15 +47,34 @@ export const Abouts: FC<props> = ({}) => {
                 </div>
                 <div
                   className='font-primary text-sm tracking-[2px]'
-                  dangerouslySetInnerHTML={{ __html: item.title }}
+                  dangerouslySetInnerHTML={{ __html: t(item.title) }}
                 />
               </div>
             ))}
           </div>
+          <p>{t('about.title.1')}</p>
+          <div className='flex gap-x-1 mb-[10px] '>
+            {Object.values(skills_languages).map((IconSvg, index) => (
+              <IconSvg key={`32${index}`} className='w-8 h-8' />
+            ))}
+          </div>
+          <p>{t('about.title.2')}</p>
+          <div className='flex gap-x-1 mb-[10px] '>
+            {Object.values(skills_backend).map((IconSvg, index) => (
+              <IconSvg key={`12${index}`} className='w-8 h-8' />
+            ))}
+          </div>
+          <p>{t('about.title.3')}</p>
+          <div className='flex gap-x-1 mb-[80px] '>
+            {Object.values(skills_frontend).map((IconSvg, index) => (
+              <IconSvg key={`22${index}`} className='w-8 h-8' />
+            ))}
+          </div>
+
           <div className='flex gap-x-8  items-center'>
-            <button className='btn btn-lg'>Contactame</button>
+            <button className='btn btn-lg'>{t('banner.contact')}</button>
             <a className='text-gradient btn-link' href='#'>
-              Mi portafolio
+              {t('banner.portfolio')}
             </a>
           </div>
         </motion.div>

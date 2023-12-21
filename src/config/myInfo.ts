@@ -1,43 +1,42 @@
 import type { iconPaths } from '@/components/shared/Icons/IconPaths'
+import { defaultLang, ui } from '@/i18n/ui'
 
 interface ExperienceProps {
-  title: string
+  title: keyof typeof ui[typeof defaultLang]
   ano: number
 }
 interface Props {
-  name: string
-  description2: string
-  lastName: string
-  description: string
+  name: keyof typeof ui[typeof defaultLang]
+  description2: keyof typeof ui[typeof defaultLang]
+  lastName: keyof typeof ui[typeof defaultLang]
+  description: keyof typeof ui[typeof defaultLang]
   socials: {
     href: string
     icon: keyof typeof iconPaths
   }[]
   cv: string
-  job: (string | number)[]
+  job: (keyof typeof ui[typeof defaultLang] | number)[]
   experience: ExperienceProps[]
-  titleAbout: string
+  titleAbout: keyof typeof ui[typeof defaultLang]
 }
 
 export const dataMyInfo: Props = {
-  name: 'Oscar',
-  lastName: 'Herrera Lugo',
-  titleAbout: 'Sobre Mí',
+  name: 'myInfo.name',
+  lastName: 'myInfo.lastName',
+  titleAbout: 'about.title',
   cv: 'https://docs.google.com/document/d/17EmXALv6Fqyhs2D85J12lCpqfA26vmkGpSGMlaiFlDs/edit#heading=h.gjdgxs',
   job: [
-    'Android Developer',
+    'myInfo.job.1',
     1000,
-    'Backend Developer',
+    'myInfo.job.2',
     1000,
-    'Frontend Developer',
+    'myInfo.job.3',
     1000,
-    'Full stack Developer',
+    'myInfo.job.4',
     1000
   ],
-  description:
-    'Construyendo experiencias completas desde el front-end hasta el back-end, dejando una huella tecnológica en cada proyecto.',
-  description2:
-    'Con 4 años de trayectoria, he puesto en práctica métodos efectivos y enfoques ágiles para asegurar resultados de calidad y eficiencia en cada proyecto.',
+  description: 'myInfo.description',
+  description2: 'myInfo.description2',
   socials: [
     {
       href: 'https://www.linkedin.com/in/osedhelu/',
@@ -59,15 +58,15 @@ export const dataMyInfo: Props = {
   experience: [
     {
       ano: 4,
-      title: 'Años de<br/> experiencia '
+      title: 'myInfo.experience.1'
     },
     {
       ano: 12,
-      title: 'Proyectos <br/> realizados'
+      title: 'myInfo.experience.2'
     },
     {
       ano: 20,
-      title: 'Clientes <br/> satisfechos'
+      title: 'myInfo.experience.3'
     }
   ]
 }
