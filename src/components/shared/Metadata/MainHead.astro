@@ -3,12 +3,13 @@ import { SEO } from "astro-seo";
 
 import { ViewTransitions } from "astro:transitions";
 import "./styles/globas.css";
-import { useTranslations } from "@/i18n/utils";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 interface Props {
   title?: string | undefined;
   description?: string | undefined;
 }
 
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations({ url: Astro.url });
 const { title = t("meta.title"), description = t("meta.description") } =
   Astro.props;
@@ -17,15 +18,44 @@ console.log(Astro.url.href);
 
 <meta charset="UTF-8" />
 <SEO
+  titleTemplate="%s | Oscar Herrera | Portfolio"
+  titleDefault="Oscar Herrera | Portfolio"
+  charset="utf-8"
   canonical={Astro.url.href}
   title={title}
   description={description}
   openGraph={{
+    optional: { locale: lang, description, siteName: "Oscar Herrera" },
     basic: {
       url: Astro.url.href,
       title,
       type: "image/svg+xml",
       image: "https://oscarherrera.tech/favicon.ico",
+    },
+    image: {
+      width: 36,
+      height: 36,
+      alt: "Image Logo full stack developer",
+      secureUrl: "https://oscarherrera.tech/favicon.svg",
+      type: "image/svg+xml",
+      url: "https://oscarherrera.tech/favicon.svg",
+    },
+    article: {
+      authors: ["@osedhelu12"],
+      expirationTime: "2022-12-31T23:59:59+00:00",
+      modifiedTime: "2022-12-31T23:59:59+00:00",
+      publishedTime: "2022-12-31T23:59:59+00:00",
+      section: "Technology",
+      tags: [
+        "Technology",
+        "Software",
+        "Developer",
+        "Blog",
+        "Backend",
+        "Frontend",
+        "Back-end",
+        "Front-end",
+      ],
     },
   }}
   twitter={{
