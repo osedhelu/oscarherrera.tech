@@ -40,7 +40,7 @@ export const ui = {
     'meta.title':
       'Oscar Herrera: Full Stack Developer - Creating innovative solutions',
     'meta.description':
-      'Hello! I am Oscar Herrera, a Full Stack developer passionate about creating innovative solutions. In my portfolio you will find examples of my projects, where I combine my experience in front-end and back-end web development to provide efficient and attractive solutions. Explore my work and find out how I can help you bring your ideas to life!',
+      'Hello! 👋 I am Oscar Herrera, a Full Stack developer 💻 passionate about creating innovative solutions 🚀. In my portfolio 📂 you will find examples of my projects, where I combine my experience in front-end 🌐 and back-end 🖥️ web development to provide efficient and attractive solutions 🎯. Explore my work and find out how I can help you bring your ideas to life 💡!',
     '404.return': 'Back to home',
     '404.not_found': 'The page you are looking for does not exist.'
   },
@@ -78,7 +78,7 @@ export const ui = {
     'meta.title':
       'Oscar Herrera: Desarrollador Full Stack - Creando soluciones innovadoras',
     'meta.description':
-      '¡Hola! Soy Oscar Herrera, un desarrollador Full Stack apasionado por crear soluciones innovadoras. En mi portafolio encontrarás ejemplos de mis proyectos, donde combino mi experiencia en desarrollo web front-end y back-end para brindar soluciones eficientes y atractivas. ¡Explora mi trabajo y descubre cómo puedo ayudarte a hacer realidad tus ideas',
+      '¡Hola! 👋 Soy Oscar Herrera, un desarrollador Full Stack 💻 apasionado por crear soluciones innovadoras 🚀. En mi portafolio 📂 encontrarás ejemplos de mis proyectos, donde combino mi experiencia en desarrollo web front-end 🌐 y back-end 🖥️ para brindar soluciones eficientes y atractivas 🎯. ¡Explora mi trabajo y descubre cómo puedo ayudarte a hacer realidad tus ideas 💡.',
     '404.return': 'Volver a inicio',
     '404.not_found': 'Lo que estabas buscando no existe.'
   }

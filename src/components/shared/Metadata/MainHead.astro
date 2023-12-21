@@ -14,7 +14,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations({ url: Astro.url });
 const { title = t("meta.title"), description = t("meta.description") } =
   Astro.props;
-console.log(Astro.url.href);
 ---
 
 <meta charset="UTF-8" />
