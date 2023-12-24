@@ -7,11 +7,20 @@ import {
     skills_frontend,
     skills_languages,
 } from "./react/ui/About/logos";
+import { useTranslations } from "@/i18n/utils";
+const t = useTranslations({ url: Astro.url });
 ---
 
 <section class="section" id="work">
     <div class="container mx-auto">
-        <h2 class="sr-only">Products</h2>
+        <div class="w-full grid justify-items-center">
+            <h2 class="text-[20px] lg:h2 text-accent mb-6">
+                {t("works.title")}
+            </h2>
+            <h3 class="text-[9px] lg:h3 max-w-[455px] mb-16">
+                {t("works.description")}
+            </h3>
+        </div>
 
         <WorkContainer>
             <CardWord

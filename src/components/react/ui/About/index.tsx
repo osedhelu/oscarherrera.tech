@@ -5,7 +5,12 @@ import { type FC } from 'react'
 import { useInView } from 'react-intersection-observer'
 import CountUp from '../CountUp'
 import style from './About.module.css'
-import { skills_backend, skills_frontend, skills_languages } from './logos'
+import {
+  skills_DevOps,
+  skills_backend,
+  skills_frontend,
+  skills_languages
+} from './logos'
 import { useTranslations } from '@/i18n/utils'
 interface props {
   children?: React.ReactNode
@@ -53,19 +58,19 @@ export const Abouts: FC<props> = ({}) => {
             ))}
           </div>
           <p>{t('about.title.1')}</p>
-          <div className='flex gap-x-1 mb-[10px] '>
+          <div className='flex gap-x-4 mb-[10px] '>
             {Object.values(skills_languages).map((IconSvg, index) => (
               <IconSvg key={`32${index}`} className='w-8 h-8' />
             ))}
           </div>
           <p>{t('about.title.2')}</p>
-          <div className='flex gap-x-1 mb-[10px] '>
+          <div className='flex gap-x-4 mb-[10px] '>
             {Object.values(skills_backend).map((IconSvg, index) => (
               <IconSvg key={`12${index}`} className='w-8 h-8' />
             ))}
           </div>
           <p>{t('about.title.3')}</p>
-          <div className='flex gap-x-1 mb-[80px] '>
+          <div className='flex gap-x-4'>
             {Object.values(skills_frontend).map((IconSvg, index) => (
               <IconSvg
                 key={`22${index}`}
@@ -73,7 +78,15 @@ export const Abouts: FC<props> = ({}) => {
               />
             ))}
           </div>
-
+          <p>{t('about.title.4')}</p>
+          <div className='flex gap-x-4 mb-[80px] '>
+            {Object.values(skills_DevOps).map((IconSvg, index) => (
+              <IconSvg
+                key={`22${index}`}
+                className='w-8 h-8 dark:fill-white '
+              />
+            ))}
+          </div>
           <div className='flex gap-x-8  items-center'>
             <button className='btn btn-lg'>{t('banner.contact')}</button>
             <a className='text-gradient btn-link' href='#'>

@@ -19,6 +19,9 @@ export const ui = {
       'My education journey spans from elementary school to university',
     'works.skills': 'Skills',
     'works.view_project': 'view project',
+    'works.title': 'Projects',
+    'works.description':
+      'In this section you will find examples of my projects.',
     'about.title': 'About me',
     'about.description': 'Full Stack Developer',
     'myInfo.name': 'Oscar',
@@ -37,6 +40,7 @@ export const ui = {
     'about.title.1': 'Languages programming',
     'about.title.2': 'Skills backend',
     'about.title.3': 'Skills frontend',
+    'about.title.4': 'Skills DevOps',
     'meta.title':
       'Oscar Herrera: Full Stack Developer - Creating innovative solutions',
     'meta.description':
@@ -57,6 +61,9 @@ export const ui = {
       'Mi trayectoria educativa abarca desde la escuela primaria hasta la universidad',
     'works.skills': 'Habilidades',
     'works.view_project': 'ver proyecto',
+    'works.title': 'Proyectos',
+    'works.description':
+      'En este apartado encontrará proyectos que he realizado en mi tiempo libre.',
     'about.title': 'Sobre mi',
     'about.description': 'Desarrollador Full Stack',
     'myInfo.name': 'Oscar',
@@ -75,6 +82,7 @@ export const ui = {
     'about.title.1': 'Lenguajes de Programacion',
     'about.title.2': 'Habilidades en Backend',
     'about.title.3': 'Habilidades en Frontend',
+    'about.title.4': 'Habilidades en DevOps',
     'meta.title':
       'Oscar Herrera: Desarrollador Full Stack - Creando soluciones innovadoras',
     'meta.description':

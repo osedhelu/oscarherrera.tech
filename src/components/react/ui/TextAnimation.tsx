@@ -15,7 +15,7 @@ export const TextAnimation: FC<props> = ({}) => {
         sequence={dataMyInfo.job.map((item, index) =>
           typeof item === 'string' ? t(item as any) : item
         )}
-        className='text-accent text-3xl'
+        className='text-accent text-1xl lg:text-3xl'
         wrapper='span'
         speed={50}
         repeat={Infinity}
