@@ -28,13 +28,21 @@ export const CardWord: FC<props> = ({
 }) => {
   const t = useTranslations({ state: 'react' })
   return (
-    <div className='relative  flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+    <div className='relative  flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md hover:shadow-2xl'>
       <a
-        className='relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl'
+        className={`relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl`}
         astro-data-history='replace'
         href={href}
       >
-        <img className='object-cover' src={img} alt='product image' />
+        <div
+          className={`object-cover bg-contain bg-center no-repeat`}
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundImage: `url(${img})`
+          }}
+        />
         <span className='absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white'>
           {titleState}
         </span>
