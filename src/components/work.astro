@@ -1,13 +1,12 @@
 ---
+import { useTranslations } from "@/i18n/utils";
 import { WorkContainer } from "@/react/ui/word/WorkContainer";
-import Icon from "./shared/Icons/Icon.astro";
-import { CardWord } from "./react/ui/word/CardWord";
 import {
     skills_backend,
     skills_frontend,
     skills_languages,
 } from "./react/ui/About/logos";
-import { useTranslations } from "@/i18n/utils";
+import { CardWord } from "./react/ui/word/CardWord";
 const t = useTranslations({ url: Astro.url });
 ---
 
@@ -25,14 +24,19 @@ const t = useTranslations({ url: Astro.url });
         <WorkContainer>
             <CardWord
                 client:only="react"
-                title="App de Sincronizacion de Datos"
+                title="Api Pagomovil Sincronizar Datos"
                 href="#"
                 img="/img_app2.jpeg"
                 titleState=""
             >
                 <skills_backend.django className="w-10 h-10" />
-                <skills_backend.djangorestframework className="w-10 h-10" />
-                <skills_frontend.react className="w-10 h-10" />
+                <skills_backend.djangorestframework
+                    className="w-10 h-10 bg-white rounded-full"
+                />
+                <skills_backend.swagger className="w-10 h-10" />
+                <skills_backend.socketio
+                    className="w-10 h-10 fill-black dark:fill-white"
+                />
             </CardWord>
             <CardWord
                 title="Pagomovil Banco de Venezuela"
@@ -60,7 +64,7 @@ const t = useTranslations({ url: Astro.url });
                 title="Pagomovil Banco Fondo Comun"
                 client:only="react"
                 href="#"
-                img="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
+                img="/img_app4.jpeg"
                 titleState=""
             >
                 <skills_languages.kotlin className="w-10 h-10" />
