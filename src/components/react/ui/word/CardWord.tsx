@@ -43,7 +43,7 @@ export const CardWord: FC<props> = ({
             backgroundImage: `url(${img})`
           }}
         />
-        <span className='absolute top-0 left-0 m-2 rounded-full  px-2 text-center text-sm font-medium '>
+        <span className='absolute top-0 left-0 m-2 rounded-full  px-2 text-center text-sm font-medium bg-red-300'>
           {titleState}
         </span>
       </a>
@@ -52,7 +52,6 @@ export const CardWord: FC<props> = ({
           <h5 className='text-xl tracking-tight '>{title}</h5>
         </a>
         <div className='mt-2 mb-5 flex items-center justify-between'>
-          
           <div className='flex items-center gap-2'>{children}</div>
         </div>
         <a
