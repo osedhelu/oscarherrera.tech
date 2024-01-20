@@ -1,0 +1,41 @@
+Progress: resolved 0, reused 1, downloaded 0, added 0
+Progress: resolved 2, reused 2, downloaded 0, added 0
+Progress: resolved 9, reused 9, downloaded 0, added 0
+Progress: resolved 10, reused 10, downloaded 0, added 0
+Progress: resolved 11, reused 11, downloaded 0, added 0
+Progress: resolved 17, reused 15, downloaded 0, added 0
+Progress: resolved 17, reused 17, downloaded 0, added 0
+Progress: resolved 18, reused 17, downloaded 0, added 0
+Progress: resolved 266, reused 266, downloaded 0, added 0
+Progress: resolved 309, reused 309, downloaded 0, added 0
+Progress: resolved 390, reused 381, downloaded 0, added 0
+Progress: resolved 434, reused 425, downloaded 0, added 0
+Progress: resolved 487, reused 478, downloaded 0, added 0
+Progress: resolved 527, reused 518, downloaded 0, added 0
+Packages: +236 -1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+Progress: resolved 540, reused 531, downloaded 0, added 8
+Progress: resolved 540, reused 531, downloaded 0, added 183
+Progress: resolved 540, reused 531, downloaded 0, added 235
+Progress: resolved 540, reused 531, downloaded 0, added 236, done
+
+devDependencies:
++ @nomicfoundation/hardhat-chai-matchers 2.0.3
++ @nomicfoundation/hardhat-ethers 3.0.5
++ @nomicfoundation/hardhat-network-helpers 1.0.10
++ @nomicfoundation/hardhat-toolbox 4.0.0
++ @nomicfoundation/hardhat-verify 2.0.3
++ @typechain/ethers-v6 0.5.1
++ @typechain/hardhat 9.1.0
++ @types/chai 4.3.11
++ @types/mocha 10.0.6
++ @types/node 20.11.5
++ chai 4.4.1 (5.0.0 is available)
++ ethers 6.10.0
++ hardhat-gas-reporter 1.0.9
++ solidity-coverage 0.8.5
++ ts-node 10.9.2
++ typechain 8.3.2
++ typescript 5.3.3
+
+Done in 18.7s
