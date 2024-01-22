@@ -1,21 +1,17 @@
 import { ethers } from "hardhat";
-
+async function deployOneYearLockFixture() {
+  const [owner, account1, account2, account3] = await ethers.getSigners();
+  const Token = await ethers.getContractFactory("OsdToken");
+  const token = await Token.connect(owner).deploy();
+  return { token, owner, account1, account2, account3 };
+}
 async function main() {
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
   const unlockTime = currentTimestampInSeconds + 60;
-
-  const lockedAmount = ethers.parseEther("0.001");
-
-  const lock = await ethers.deployContract("Lock", [unlockTime], {
-    value: lockedAmount,
-  });
-
-  await lock.waitForDeployment();
+  const { token, owner } = await deployOneYearLockFixture();
 
   console.log(
-    `Lock with ${ethers.formatEther(
-      lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.target}`
+    `Lock with ETH and unlock timestamp ${unlockTime} deployed to ${await token.getAddress()}`
   );
 }
 
