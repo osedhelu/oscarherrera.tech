@@ -10,6 +10,7 @@ contract OsdToken {
     string public constant symbol = "OSD";
     uint8 public constant decimals = 18;
     uint256 public totalSupply = 1000000 * 10 ** 18; // 1 Million de Tokens
+
     /* Eventos para la transferencia de tokens de un address a otro
     from : address que envia
     to : address que recibe
@@ -61,11 +62,11 @@ contract OsdToken {
         uint256 amount,
         string memory data
     ) public returns (bool success) {
-        require(balanceOf[msg.sender] >= amount);
-        balanceOf[msg.sender] -= amount;
-        balanceOf[to] += amount;
-        emit Transfer(msg.sender, to, amount, data);
-        return true;
+        require(
+            balanceOf[msg.sender] >= amount,
+            "OsdToken: no tienes suficientes tokens"
+        );
+        return _transfer(msg.sender, to, amount, data);
     }
 
     /*
@@ -89,10 +90,10 @@ contract OsdToken {
             "OsdToken: no tienes permiso para enviar estos token"
         );
         allowed[msg.sender][from] -= amount; // decrementar el saldo permitido
-        return emitPaymentSend(from, to, amount, data);
+        return _transfer(from, to, amount, data);
     }
 
-    function emitPaymentSend(
+    function _transfer(
         address from,
         address to,
         uint256 amount,
@@ -120,23 +121,14 @@ contract OsdToken {
         return walletAdmin;
     }
 
-    function paySmartContract(address to) public onlyOwner {
-        uint256 amount = 10 * 10 ** 18;
-        transfer(to, amount, "payment");
+    function paySmartContract(
+        address to,
+        uint256 amount
+    ) public onlyOwner returns (bool) {
+        require(
+            balanceOf[address(this)] >= amount,
+            "OsdToken: el Contrato no tiene saldo"
+        );
+        return _transfer(address(this), to, amount, "pago a usuario");
     }
-
-    //  * Metodo que entrega cada 2 horar 1 token a un address
-    //     teniendo en cuenta el tiempo y un arreglo de fechas
-    //  */
-    // function paymentSetTokenTime() public {
-    //     uint256 time = block.timestamp;
-    //     if (time % 86400 == 0) {
-    //         for (uint256 i = 0; i < 10; i++) {
-    //             if (time % (86400 * (i + 1)) == 0) {
-    //                 uint256 amount = 10 * 10 ** 18;
-    //                 transfer(walletAdmin, amount, "payment");
-    //             }
-    //         }
-    //     }
-    // }
 }
