@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "h": "hardhat"
+    "h": "hardhat",
+    "h:co": "hardhat compile",
+    "test": "hardhat test"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +26,7 @@
     "ethers": "^6.4.0",
     "hardhat": "^2.19.4",
     "hardhat-gas-reporter": "^1.0.8",
+    "helia": "^3.0.1",
     "solidity-coverage": "^0.8.0",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.0",

@@ -1,7 +1,8 @@
 ---
-import Header from "@/components/shared/Header.astro";
+import { TiendaNavbar } from "@/components/react/shared/TiendaNavbar";
 import MainHead from "@/components/shared/Metadata/MainHead.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import type { ViewTransitions } from "astro:transitions";
 const lang = getLangFromUrl(Astro.url);
 
 interface Props {
@@ -19,7 +20,15 @@ const { title = t("meta.title"), description = t("meta.description") } =
     <MainHead title={title} description={description} />
   </head>
   <body class="dark:bg-black bg-white bg-no-repeat text-black dark:text-white">
-    <Header />
+    <TiendaNavbar client:load transition:persist transition:name="media-player"/>
+    <div class="container mx-auto mt-[80px] lg:mt-[0px]">
     <slot />
+    </div>
+    <script>
+      document.addEventListener('astro:page-load', () => {
+        // Esto solo se ejecuta una vez.
+        console.log("hola")
+      }, { once: true });
+    </script>
   </body>
 </html>

@@ -131,4 +131,8 @@ contract OsdToken {
         );
         return _transfer(address(this), to, amount, "pago a usuario");
     }
+
+    function updateOwner(address newOwner) public onlyOwner {
+        walletAdmin = newOwner;
+    }
 }

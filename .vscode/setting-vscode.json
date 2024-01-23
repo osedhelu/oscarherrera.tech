@@ -1,0 +1,99 @@
+{
+	"scm.inputFontFamily": "'MesloLGS NF'",
+	"remote.SSH.remotePlatform": {
+		"xtein": "linux",
+		"yafuz": "linux",
+		"yafuz-production": "linux"
+	},
+	"bracketPairColorizer.scopeLineRelativePosition": true,
+	"bracket-pair-colorizer-2.colors": [
+		"#fafafa",
+		"#9F51B6",
+		"#F7C244",
+		"#F07850",
+		"#9CDD29",
+		"#C497D4"
+	],
+	"vim.easymotion": true,
+	"vim.incsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.useCtrlKeys": true,
+	"vim.hlsearch": true,
+
+	"vim.leader": "<space>",
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false
+	},
+	"editor.fontFamily": "'MesloLGS NF'",
+	"terminal.integrated.fontFamily": "'MesloLGS NF'",
+	"editor.codeLensFontFamily": "'MesloLGS NF'",
+	"editor.inlayHints.fontFamily": "'MesloLGS NF'",
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"terminal.integrated.defaultProfile.windows": "swl",
+	"git.autofetch": true,
+	"[solidity]": {
+		"editor.defaultFormatter": "JuanBlanco.solidity"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"explorer.confirmDelete": false,
+	"workbench.colorTheme": "Monokai Night",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"workbench.iconTheme": "material-icon-theme",
+	"[scss]": {
+		"editor.defaultFormatter": "svipas.prettier-plus"
+	},
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+	},
+	"synthwave84.brightness": 0.5,
+	"synthwave84.disableGlow": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"glassit.alpha": 220,
+	"editor.fontSize": 12,
+	"terminal.integrated.fontSize": 11,
+	"screencastMode.fontSize": 50,
+	"activitusbar.showSourceControlCounter": true,
+	"activitusbar.views": [
+		{
+			"name": "explorer",
+			"codicon": "explorer-view-icon"
+		},
+		{
+			"name": "search",
+			"codicon": "search-view-icon"
+		},
+		{
+			"name": "scm",
+			"codicon": "source-control-view-icon"
+		},
+		{
+			"name": "debug",
+			"codicon": "run-view-icon"
+		},
+		{
+			"name": "extensions",
+			"codicon": "extensions-view-icon"
+		}
+	],
+	"workbench.activityBar.visible": false
+}
