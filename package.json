@@ -9,7 +9,8 @@
     "lint": "next lint",
     "s:co": "git add . && sui-mono commit",
     "s:re": "sui-mono release",
-    "s:ch": "sui-mono check"
+    "s:ch": "sui-mono check",
+    "s": "sui-mono"
   },
   "dependencies": {
     "@nanostores/react": "^0.7.1",
