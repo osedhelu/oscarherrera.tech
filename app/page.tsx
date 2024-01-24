@@ -12,9 +12,7 @@ export default function Home() {
       <LandingHeader path="/" />
       <Navjsx />
       <Banner path="/" />
-      <section className="section" id="about">
-        <Abouts />
-      </section>
+      <Abouts />
       <Services />
       <WorkSection />
       <ContractSection />
