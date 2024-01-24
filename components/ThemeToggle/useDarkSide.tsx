@@ -4,8 +4,11 @@ export const useDarkSide = (): [
   string,
   React.Dispatch<React.SetStateAction<string>>
 ] => {
-  console.log("TCL: theme, setTheme] ");
-  const [theme, setTheme] = useState<string>(localStorage.theme); // error corregir
+  let themeStore: any = "light";
+  if (typeof window !== "undefined") {
+    themeStore = localStorage.theme || "light";
+  }
+  const [theme, setTheme] = useState<string>(themeStore); // error corregir
   const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
