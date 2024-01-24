@@ -1,3 +1,11 @@
+import AllNFTs from "@/components/Marketplace/AllNFTs";
+
 export default function page() {
-  return <div>page</div>;
+  return (
+    <>
+      <section>
+        <AllNFTs />
+      </section>
+    </>
+  );
 }

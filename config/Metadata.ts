@@ -9,6 +9,7 @@ export const getMetadata = ({
   description: string;
   urlBase?: string;
 }): Metadata => ({
+  metadataBase: new URL(urlBase),
   openGraph: {
     title,
     description,
@@ -16,12 +17,12 @@ export const getMetadata = ({
     siteName: "Oscar Herrera Lugo",
     images: [
       {
-        url: `${urlBase}/opengraph.png`, // Must be an absolute URL
+        url: `${urlBase}/opengraph.png`,
         width: 800,
         height: 600,
       },
       {
-        url: `${urlBase}/opengraph.png`, // Must be an absolute URL
+        url: `${urlBase}/opengraph.png`,
         width: 1800,
         height: 1600,
         alt: description,
@@ -34,11 +35,15 @@ export const getMetadata = ({
   description,
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      new URL("/favicon.ico", urlBase),
-      { url: "/favicon.ico", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      new URL("/favicon.svg", urlBase),
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+        media: "(prefers-color-scheme: dark)",
+      },
     ],
-    shortcut: ["/favicon.ico"],
+    shortcut: ["/favicon.svg"],
     apple: [
       { url: "/favicon.ico" },
       { url: "/favicon.svg", sizes: "180x180", type: "image/svg+xml" },
@@ -46,7 +51,8 @@ export const getMetadata = ({
     other: [
       {
         rel: "apple-touch-icon-precomposed",
-        url: "/favicon.ico",
+        type: "image/svg+xml",
+        url: "/favicon.svg",
       },
     ],
   },
@@ -58,7 +64,8 @@ export const getMetadata = ({
     creator: "@nextjs",
     creatorId: "1467726470533754880",
     images: {
-      url: `${urlBase}/favicon.ico`,
+      url: `${urlBase}/opengraph.png`,
+      type: "image/png",
       alt: "osedhelu Logo",
     },
     app: {
