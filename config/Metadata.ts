@@ -16,12 +16,12 @@ export const getMetadata = ({
     siteName: "Oscar Herrera Lugo",
     images: [
       {
-        url: `${urlBase}/favicon.svg`, // Must be an absolute URL
+        url: `${urlBase}/favicon.ico`, // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: `${urlBase}/favicon.svg`, // Must be an absolute URL
+        url: `${urlBase}/favicon.ico`, // Must be an absolute URL
         width: 1800,
         height: 1600,
         alt: description,
