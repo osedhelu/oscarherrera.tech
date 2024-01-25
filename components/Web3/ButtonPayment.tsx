@@ -7,8 +7,6 @@ import React from "react";
 
 const USDTAddress = "0x...";
 
-// The ERC-20 Contract ABI, which is a common contract interface
-// for tokens (this is the Human-Readable ABI format)
 const USDTAbi = [
   "function name() view returns (string)",
   "function symbol() view returns (string)",
@@ -17,7 +15,7 @@ const USDTAbi = [
   "event Transfer(address indexed from, address indexed to, uint amount)",
 ];
 
-export const Components = () => {
+export const ButtonPayment = () => {
   const { address, chainId, isConnected } = useWeb3ModalAccount();
   const { walletProvider } = useWeb3ModalProvider();
 
