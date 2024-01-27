@@ -1,3 +1,4 @@
+import { Env } from "@/config/env";
 import {
   useWeb3ModalProvider,
   useWeb3ModalAccount,
@@ -5,7 +6,7 @@ import {
 import { ethers } from "ethers";
 import React from "react";
 
-const USDTAddress = "0x...";
+const USDTAddress = Env.SMART_CONTRACT;
 
 const USDTAbi = [
   "function name() view returns (string)",
@@ -28,9 +29,10 @@ export const ButtonPayment = () => {
     const signer = await ethersProvider.getSigner();
     // The Contract object
     const USDTContract = new ethers.Contract(USDTAddress, USDTAbi, signer);
-    const USDTBalance = await USDTContract.balanceOf(address);
+    const USDTBalance = await USDTContract.name();
+    console.log("TCL: getBalance -> USDTBalance", USDTBalance);
 
-    console.log(ethers.utils.formatUnits(USDTBalance, 18));
+    // console.log(ethers.utils.formatUnits(USDTBalance, 18));
   }
 
   return <button onClick={getBalance}>Get User Balance</button>;

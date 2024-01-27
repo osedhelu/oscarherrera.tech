@@ -19,6 +19,13 @@ const testnet = {
   explorerUrl: "https://testnet.bscscan.com",
   rpcUrl: "https://data-seed-prebsc-1-s1.binance.org:8545/",
 };
+const ganache = {
+  chainId: 31337,
+  name: "Ganache",
+  currency: "GO",
+  explorerUrl: "http://localhost:8545",
+  rpcUrl: "http://localhost:8545",
+};
 const mainnet = {
   chainId: 56,
   name: "Binance Smart Chain Mainnet",
@@ -37,7 +44,7 @@ const metadata = {
 
 createWeb3Modal({
   ethersConfig: defaultConfig({ metadata }),
-  chains: [mainnet, testnet],
+  chains: [ganache],
   projectId,
   enableAnalytics: true,
   featuredWalletIds: [

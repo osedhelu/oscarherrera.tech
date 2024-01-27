@@ -7,12 +7,12 @@ export const NavbarMenu = [
     name: "Crear NFT",
     path: "/marketplace/create",
   },
-  {
-    name: "Work",
-    path: "/work",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
+  // {
+  //   name: "Work",
+  //   path: "/work",
+  // },
+  // {
+  //   name: "Contact",
+  //   path: "/contact",
+  // },
 ];

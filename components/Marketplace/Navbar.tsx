@@ -5,6 +5,7 @@ import Link from "next/link";
 import { OscarLogo } from "../OscarLogo";
 import { NavbarMenu } from "./Navbar.data";
 import Web3Button from "./Web3Button";
+import { ThemeTogglejsx } from "../ThemeToggle/ThemeToggle";
 
 export default function MarketplaceNavbar() {
   const navbar = useStore($NavStore);
@@ -59,6 +60,9 @@ export default function MarketplaceNavbar() {
                   </Link>
                 </li>
               ))}
+              <li className="flex justify-center items-center">
+                <ThemeTogglejsx />
+              </li>
               <li className="flex justify-center items-center">
                 <Web3Button />
               </li>
