@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# oscarherrera.tech
 
-## Getting Started
+Sitio personal de **Oscar Eduardo Herrera Lugo** — Full Stack Developer.
 
-First, run the development server:
+## Contenido
+
+- **Sobre mí**: perfil, ubicación, disponibilidad para viajar y cambio de residencia.
+- **Experiencia laboral**: Extreme Technologies, Disglobal, Legger, Legendarium, Ardecon.
+- **Proyectos**: Yafuzgame (NFT, Solidity, Next.js, AWS).
+- **Habilidades**: lenguajes, backend, frontend, móvil, blockchain, bases de datos, herramientas.
+- **Formación**: Politécnico Grancolombiano, SENA, certificaciones Udemy, idiomas.
+- **Contacto**: email, teléfono, LinkedIn, GitHub.
+
+## Cómo probar en local
+
+Abre `index.html` en el navegador o sirve la carpeta con un servidor local:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Con Python
+python3 -m http.server 8000
+
+# Con Node (npx)
+npx serve .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Luego visita `http://localhost:8000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Cómo publicar
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Sube la carpeta `oscarherrera.tech` (con `index.html`, `styles.css`, `main.js`) a tu hosting o a GitHub Pages.
+2. Si usas el dominio **oscarherrera.tech**, configura el DNS apuntando a tu hosting.
+3. No se requieren dependencias ni build: son HTML, CSS y JS estáticos.
 
-## Learn More
+## Estructura
 
-To learn more about Next.js, take a look at the following resources:
+- `index.html` — Contenido y JSON-LD (schema.org) para que buscadores y sistemas escaneen tu información.
+- `styles.css` — Tema claro/oscuro (respeta preferencia del sistema), responsive, accesible.
+- `main.js` — Navegación móvil, alternar tema, año en el pie.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Mantener la información actualizada
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Edita el contenido directamente en `index.html`. Si actualizas también la hoja de vida en la carpeta padre (`hoja_de_vida.md` o `README.md`), considera sincronizar los datos en este sitio (experiencia, contacto, formación) para que todo coincida.
