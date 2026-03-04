@@ -5,6 +5,7 @@ import Link from "next/link";
 import { OscarLogo } from "../OscarLogo";
 import { NavbarMenu } from "./Navbar.data";
 import Web3Button from "./Web3Button";
+import { FSTDBalance } from "./FSTDBalance";
 import { ThemeTogglejsx } from "../ThemeToggle/ThemeToggle";
 
 export default function MarketplaceNavbar() {
@@ -63,7 +64,8 @@ export default function MarketplaceNavbar() {
               <li className="flex justify-center items-center">
                 <ThemeTogglejsx />
               </li>
-              <li className="flex justify-center items-center">
+              <li className="flex justify-center items-center gap-2">
+                <FSTDBalance />
                 <Web3Button />
               </li>
             </ul>

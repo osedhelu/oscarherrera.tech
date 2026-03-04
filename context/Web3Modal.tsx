@@ -1,6 +1,7 @@
 "use client";
 import { setLogin } from "@/STORE/Login";
 import { Env } from "@/config/env";
+import { FST_TESTNET } from "@/config/chains";
 import {
   createWeb3Modal,
   defaultConfig,
@@ -11,7 +12,14 @@ import { useEffect } from "react";
 // 1. Get projectId
 const projectId = Env.WEB3_API_ID;
 
-// 2. Set chains
+// 2. Set chains — FST Testnet primero para el marketplace (pagos con FSTD)
+const fstTestnet = {
+  chainId: FST_TESTNET.chainId,
+  name: FST_TESTNET.name,
+  currency: FST_TESTNET.currency,
+  explorerUrl: FST_TESTNET.explorerUrl,
+  rpcUrl: Env.FST_TESTNET_RPC,
+};
 const testnet = {
   chainId: 97,
   name: "Smart Chain - Testnet",
@@ -44,7 +52,7 @@ const metadata = {
 
 createWeb3Modal({
   ethersConfig: defaultConfig({ metadata }),
-  chains: [ganache],
+  chains: [fstTestnet, ganache, testnet, mainnet],
   projectId,
   enableAnalytics: true,
   featuredWalletIds: [
