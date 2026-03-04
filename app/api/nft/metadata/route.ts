@@ -6,8 +6,8 @@ const STATIC_METADATA: NFTMetadata = {
   name: "FST Certificate",
   description:
     "Certificado NFT estático de ejemplo para integración. Todos los tokens comparten esta metadata.",
-  image: "https://oscarherrera.tech/images/nft-placeholder.png",
-  external_url: "https://oscarherrera.tech/marketplace",
+  image: "https://osedhelu.com/images/nft-placeholder.png",
+  external_url: "https://osedhelu.com/marketplace",
   attributes: [
     { trait_type: "Tipo", value: "Certificado estático" },
     { trait_type: "Red", value: "FST Testnet" },
