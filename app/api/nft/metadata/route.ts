@@ -1,5 +1,6 @@
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import type { NFTMetadata } from "@/types/nft-metadata";
-import { NextRequest, NextResponse } from "next/server";
 
 const STATIC_METADATA: NFTMetadata = {
   name: "FST Certificate",
@@ -13,13 +14,11 @@ const STATIC_METADATA: NFTMetadata = {
   ],
 };
 
-export async function GET(
-  _request: NextRequest,
-  _context: { params: { tokenId: string } }
-) {
+export async function GET(_req: NextRequest) {
   return NextResponse.json(STATIC_METADATA, {
     headers: {
       "Cache-Control": "public, max-age=300",
     },
   });
 }
+
